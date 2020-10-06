@@ -130,6 +130,16 @@ $base-size: 16px;
         left: 22%;
         bottom: calc(50% - 109px);
         right: 43%;
+        @media (max-width: 767.98px) {
+            left: 10%;
+            bottom: 0;
+            right: 25%;
+        }
+        @media (max-width: 575.98px) {
+            left: 30px;
+            bottom: 10px;
+            right: 0;
+        }
         h1 {
             font-size: 36px;
             line-height: 36px;
@@ -151,10 +161,20 @@ $base-size: 16px;
                 @media (max-width: 991.98px) {
                     margin-bottom: 25px;
                 }
+                @media (max-width: 767.98px) {
+                    margin-bottom: 15px;
+                    margin-top: 5px;
+                    font-size: 12px;
+                    line-height: 16px;
+                }
             }
             @media (max-width: 1199.98px) {
                 font-size: 24px;
                 line-height: 24px;
+            }
+            @media (max-width: 767.98px) {
+                font-size: 16px;
+                line-height: 14px;
             }
         }
     }
@@ -180,20 +200,22 @@ $base-size: 16px;
             padding: 5px 13px;
             font-size: 12px;
         }
+        @media (max-width: 767.98px) {
+            padding: 2px 10px;
+            font-size: 10px;
+        }
     }
 }
 
-
-}
 .content {
     border-bottom: 1px solid #dde1e4;
 }
+
 .data {
     padding-top: 80px;
     p {
         padding-right: 14px;
     }
-    
     .social {
         display: flex;
         padding-bottom: 100px;
@@ -236,7 +258,6 @@ $base-size: 16px;
             background: #2867B2;
         }
     }
-    
     .aside {
         @media (max-width: 991.98px) {
             margin-left: 30px;
@@ -278,11 +299,11 @@ $base-size: 16px;
         }
     }
 }
+
 .profile {
     @media (max-width: 767.98px) {
         text-align: center;
     }
-    
     img {
         @media (max-width: 1199.98px) {
             width: 100%;
@@ -297,7 +318,6 @@ $base-size: 16px;
             text-align: center;
         }
     }
-    
     h4 {
         @media (max-width: 767.98px) {
             display: inline-block;
