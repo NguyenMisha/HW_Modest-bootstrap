@@ -1,7 +1,3 @@
-// @media (max-width: 575.98px) { ... }
-// @media (max-width: 767.98px) { ... }
-// @media (max-width: 991.98px) { ... }
-// @media (max-width: 1199.98px) { ... }
 @import '_variables';
 p {
     line-height: 26px;
@@ -236,23 +232,18 @@ $base-size: 16px;
         }
         .icon-facebook:hover {
             color: #4267B2;
-            // background: #4267B2;
         }
         .icon-twitter:hover {
             color: #55acee;
-            // background: #55acee;
         }
         .icon-google-plus:hover {
             color: #DD4B39;
-            // background: #DD4B39;
         }
         .icon-dribbble:hover {
             color: #ea4c89;
-            // background: #ea4c89;
         }
         .icon-behance:hover {
             color: #053eff;
-            // background: #053eff;
         }
         .icon-linkedin2:hover {
             background: #2867B2;
@@ -301,44 +292,103 @@ $base-size: 16px;
 }
 
 .profile {
-    @media (max-width: 767.98px) {
-        text-align: center;
-    }
-    img {
-        @media (max-width: 1199.98px) {
-            width: 100%;
+    .employee {
+        position: relative;
+        .info:hover {
+            .links {
+                display: inline-flex;
+            }
+            .add-info {
+                h4 {
+                    background: #3a454d;
+                    color: #fff;
+                }
+                img {
+                    opacity: .7;
+                }
+            }
         }
-        @media (max-width: 991.98px) {
-            width: 263px;
-            height: 300px;
+        .add-info {
+            @media (max-width: 767.98px) {
+                text-align: center;
+            }
+            h4 {
+                @media (max-width: 1199.98px) {
+                    width: auto;
+                }
+                @media (max-width: 991.98px) {
+                    width: 263px;
+                }
+                @media (max-width: 767.98px) {
+                    display: inline-block;
+                }
+                font-size: 16px;
+                text-transform: uppercase;
+                color: #292f36;
+                width: 263px;
+                height: 74px;
+                background: #c8cdd0;
+                padding: 21px 20px 21px 20px;
+                font-weight: 700;
+                span {
+                    display: block;
+                    text-transform: none;
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+                &:hover {
+                    background: rgba(58, 69, 77, .85);
+                    color: #fff;
+                }
+            }
+            img {
+                @media (max-width: 1199.98px) {
+                    width: 100%;
+                }
+                @media (max-width: 991.98px) {
+                    width: 263px;
+                    height: 300px;
+                }
+                @media (max-width: 767.98px) {
+                    width: 263px;
+                    height: 300px;
+                    text-align: center;
+                }
+            }
         }
-        @media (max-width: 767.98px) {
-            width: 263px;
-            height: 300px;
-            text-align: center;
-        }
-    }
-    h4 {
-        @media (max-width: 767.98px) {
-            display: inline-block;
-        }
-        font-size: 16px;
-        text-transform: uppercase;
-        color: #292f36;
-        width: 263px;
-        height: 74px;
-        background: #e1e6ea;
-        padding: 21px 20px 21px 20px;
-        font-weight: 700;
-        span {
-            display: block;
-            text-transform: none;
-            font-weight: 400;
-            font-size: 14px;
-        }
-        &:hover {
-            background: rgba(58, 69, 77, .85);
-            color: #fff;
+        .links {
+            display: flex;
+            position: absolute;
+            top: calc(50% - 67px);
+            left: calc(50% - 70px);
+            @media (max-width: 1199.98px) {
+                top: 30%;
+                left: 20%;
+            }
+            @media (max-width: 767.98px) {
+                top: 33%;
+                left: 36%;
+            }
+            @media (max-width: 575.98px) {
+                top: 33%;
+                left: 33%;
+            }
+            display: none;
+            .item {
+                display: flex;
+                width: 50px;
+                height: 50px;
+                background: #3a454d;
+                margin-right: 1px;
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    padding: 17px;
+                }
+                &:hover {
+                    background: #4e5a62;
+                }
+            }
         }
     }
 }
